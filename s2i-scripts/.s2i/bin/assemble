@@ -5,7 +5,7 @@ echo "call builder image assemble"
 
 rc=$?
 
-if [$rc -eq 0]; then
+if [ $rc -eq 0 ]; then
   echo "call builder image assemble successfully and copy index file"
   cp /tmp/src/index.html ./index2.html
 else
