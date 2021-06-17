@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "michael's assemble start, call original assemble first"
+
+/usr/libexec/s2i/assemble
+
+rc=$?
+
+if [ $rc -eq 0 ]; then
+  echo "original assemble executed successfully"
+else
+  echo "original assemble failed"
+fi
+
+exit $rc
